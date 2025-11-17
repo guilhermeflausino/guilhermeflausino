@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #042326;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+div#base {
+  position: relative;
+  min-height: 150px;
+  width: 300px;
+  background: #0a3a40;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.label {
+  position: relative;
+}
+
+.input,
+button {
+  width: 270px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.input,
+button {
+  height: 30px;
+}
+
+.input {
+  background: 0;
+  color: #1d7373;
+  border: 1px solid #1d7373;
+  padding-left: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  transition: transform 0.3s ease, border 0.3s ease;
+  appearance: none;
+}
+
+.imp {
+  background: none;
+  padding: 0 4px;
+  font-size: 13px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  color: #1d7373;
+  cursor: text;
+  transform: scale(1);
+  transition: top 0.3s ease, font-size 0.3s ease, background 0.3s ease,
+    transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  transition-delay: 0.1s;
+  opacity: 0.5;
+}
+
+.label .input:focus + .imp,
+.label .input:valid + .imp
+ {
+  top: -6px;
+  font-size: 11px;
+  background: #0a3a40;
+  opacity: 1;
+}
+
+.label .input:focus + .imp {
+  color: #107361;
+  transform: scale(1.02);
+}
+
+.label .input:hover + .imp {
+  color: #107361;
+}
+
+.label .input:focus {
+  color: #107361;
+  border: 1px solid #107361;
+  transform: scale(1.02);
+}
+
+#button {
+  margin-top: 5px;
+  height: 40px;
+  background: #1d7373;
+  color: #0a3a40;
+  cursor: pointer;
+  transform: scale(1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+input:hover {
+  border-color: #107361;
+}
+
+#button:hover {
+  background: #107361;
+  transform: scale(1.02);
+}
+
+#button:focus {
+  transform: scale(1.02);
+}
+
+#button:active {
+  transform: scale(1.01);
+  transition: background 0.05s ease, transform 0.05s ease;
+  background: #0f5959;
+}
+
+#result {
+  padding: 0 5px;
+  display: flex;
+  border-radius: 3px;
+  min-height: 25px;
+  max-width: 270px;
+  background: #042326;
+  justify-content: center;
+  align-items: center;
+  color: #0f5959;
+  margin: 5px 0 20px 0;
+  align-self: center;
+}
+
+p {
+  font-size: 12px;
+  color: #1d7373;
+  align-self: center;
+}
+
+input::-webkit-inner-spin-button{
+  appearance: none;
+}
+
+select

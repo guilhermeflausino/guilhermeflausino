@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="base">
+      <label class="label">
+        <input class="input" type="number" oninput="somar()" name="num" required />
+        <span class="imp">Numero 1</span>
+      </label>
+      <label class="label">
+        <input class="input" type="number" oninput="somar()" name="num" required />
+        <span class="imp">Numero 2</span>
+      </label>
+      <label class="label">
+        <select class="input" name="empresa" id="empresa">
+          <option disabled hidden selected></option>
+          <option value="1634">1634</option>
+          <option value="1635">1635</option>
+          <option value="1636">1636</option>
+        </select>
+        <span class="imp">Empresa</span>
+      </label>
+
+      <p>Resultado</p>
+      <div id="result">
+        <span id="span-result">0</span>
+      </div>
+    </div>
+    <script>
+      function somar() {
+        var num1 = window.document.getElementsByName("num")[0];
+        var num2 = window.document.getElementsByName("num")[1];
+        var result = document.getElementById("span-result");
+        var n1 = Number(num1.value);
+        var n2 = Number(num2.value);
+        var res = n1 + n2;
+        result.innerHTML = res;
+      }
+    </script>
+  </body>
+</html>
